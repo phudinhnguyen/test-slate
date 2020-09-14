@@ -37,7 +37,6 @@ const RichTextExample = () => {
     const renderElement = useCallback(props => <Element {...props} />, [])
     const renderLeaf = useCallback(props => <Leaf {...props} />, [])
 
-
     const BlockOption = ({ format, icon }) => {
         return (
             <div className={`option ${isBlockActive(editor, format) && "active"}`} onMouseDown={event => {
@@ -159,17 +158,17 @@ const RichTextExample = () => {
                         }
                     }}
                 />
+                <div className="tool-bar">
+                    <MarkOption format="bold" icon={"B"} />
+                    <MarkOption format="italic" icon={"I"} />
+                    <MarkOption format="underline" icon={"U"} />
+                    <MarkOption format="code" icon="</>" />
+                    <BlockOption format="heading-one" icon="h1" />
+                    <BlockOption format="heading-two" icon="h2" />
+                    <BlockOption format="numbered-list" icon={<img src="https://img.icons8.com/fluent-systems-regular/24/000000/numbered-list.png" />} />
+                    <BlockOption format="bulleted-list" icon={<img src="https://img.icons8.com/ios-filled/24/000000/bulleted-list.png" />} />
+                </div>
             </Slate>
-            <div className="tool-bar">
-                <MarkOption format="bold" icon={"B"} />
-                <MarkOption format="italic" icon={"I"} />
-                <MarkOption format="underline" icon={"U"} />
-                <MarkOption format="code" icon="</>" />
-                <BlockOption format="heading-one" icon="h1" />
-                <BlockOption format="heading-two" icon="h2" />
-                <BlockOption format="numbered-list" icon={<img src="https://img.icons8.com/fluent-systems-regular/24/000000/numbered-list.png" />} />
-                <BlockOption format="bulleted-list" icon={<img src="https://img.icons8.com/ios-filled/24/000000/bulleted-list.png" />} />
-            </div>
         </div>
     )
 }
