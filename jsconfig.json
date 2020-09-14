@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@shared/*": ["src/shared/*"],
+        "@pages/*": ["src/pages/*"],
+        "@stores/*": ["src/stores/*"],
+        "@styles/*": ["src/styles/*"],
+        "@images/*": ["src/assets/images/*"],
+        "@fonts/*": ["src/assets/fonts/*"],
+        "@icons/*": ["src/assets/icons/*"]
+      }
+    },
+    "exclude": ["node_modules", "build"]
+  }
